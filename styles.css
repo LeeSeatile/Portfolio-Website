@@ -1,0 +1,53 @@
+/*COLOR PALETTE & DESIGN TOKENS (Celestial Alchemist Theme)*/
+:root {
+    --bg-dark: #0f1419;
+    --bg-card: rgba(25, 33, 44, 0.75);
+    --bg-card-border: rgba(255, 255, 255, 0.08);
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+    --accent-gold: #d4af37;
+    --accent-gold-glow: rgba(212, 175, 55, 0.25);
+    --accent-blue: #70a1ff;
+    --accent-olive: #5f7d6a;
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+/* GLOBAL RESET & BASE STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background-color: var(--bg-dark) !important;
+}
+
+body{
+    background-color: var(--bg-dark) !important;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/*Celestial Background Gradient Glows*/
+.celestial-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background: radial-gradient(circle at 15% 20%, rgba(112, 161, 255, 0.12) 0%, transparent 45%), 
+                radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
