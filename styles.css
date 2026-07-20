@@ -26,11 +26,11 @@
 html{
     scroll-behavior: smooth;
     font-size: 16px;
-    background-color: var(--bg-dark) !important;
+    background-color: var(--bg-dark);
 }
 
 body{
-    background-color: var(--bg-dark) !important;
+    background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -52,7 +52,115 @@ body{
     z-index: -1;
 }
 
-/*SECTIONS & GLASSSMORPHIC CARDS*/
+/*NAVIGATION BAR*/
+.navbar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background: rgba(15, 20, 25, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--bg-card-border);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.logo .symbol {
+    color: var(--accent-gold);
+    margin-right: 0.3rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+}
+
+/*HERO SECTION & BUTTONS*/
+.hero {
+    text-align: center;
+    padding: 6rem 8% 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #aa820a 100%);
+    color: #0f1419;
+}
+
+.primary-btn:hover {
+    box-shadow: 0 0 15px var(--accent-gold-glow);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    border: 1px solid var(--bg-card-border);
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--text-muted);
+}
+
+/*SECTIONS & GLASSMORPHIC CARDS*/
 .section {
     padding: 5rem 8%;
     max-width: 1200px;
@@ -167,7 +275,7 @@ body{
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--bg-card-border);
     border-radius: 8px;
-    font-size: 0.85reml
+    font-size: 0.85rem;
 }
 
 .gold-btn {
@@ -198,7 +306,7 @@ footer {
 }
 
 @media (max-width: 786px) {
-    .navbar { flex-direction: colum; gap: 1rem}
+    .navbar { flex-direction: column; gap: 1rem}
     .hero h1 { font-size: 2.4rem;}
     .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center;}
 }
