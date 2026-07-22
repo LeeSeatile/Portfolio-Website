@@ -45,7 +45,7 @@
                 <h1>Lee-Anne Seatile Ramokotjo</h1>
                 <p class="tagline">The Catalyst at the Intersection of Technology, Data, and Business Strategy.</p>
                 <div class="dynamic-roles">
-                    <span id="role-text">Business Systems Analyst | Data & BI Analyst | Systems Architect</span>
+                    <span id="role-text">Software Engineer | Business Systems Analyst | BI Analyst | Data Scientist</span>
                 </div>
                 <div class="hero-actions">
                     <a href="#resume" class="btn primary-btn"><i data-lucide="file-text"></i> View Resume</a>
@@ -61,105 +61,271 @@
     </header>
 
     <!-- Chapter I: About Me -->
-    <section id="about" class="section">
-        <h2 class="section-title"><span>I.</span> The Catalyst (About)</h2>
-        <div class="about-container">
-            <div class="about-quote">
-                <h3>"I am the bridge between complex technical execution and clear business vision."</h3>
+<section id="about" class="section">
+    <h2 class="section-title"><span>I.</span> The Catalyst (About Me)</h2>
+    
+    <div class="about-container-fancy">
+        
+        <!-- Left Side: Narrative & Key Achievements -->
+        <div class="about-left-col">
+            <div class="about-quote-box">
+                <i data-lucide="quote" class="quote-icon"></i>
+                <h3>"I design systems that speak business logic, grounded in deep technical precision."</h3>
+                <p class="sub-quote">Driven by clarity, open dialogue, and personal accountability.</p>
             </div>
-            <div class="about-content">
-                <p class="lead">
-                    Driven by clarity, open organizational dialogue, and high personal accountability, I transform raw requirements and unstructured data into scalable, user-centric systems.
-                </p>
 
-                <div class="mosaic-list">
-                    <div class="mosaic-item">
-                        <i data-lucide="music"></i>
-                        <div>
-                            <h4>Rhythm & Creative Flow</h4>
-                            <p>Old-school R&B, amapiano exclusives, and live orchestral compositions keep my problem-solving creative and grounded.</p>
-                        </div>
-                    </div>
-                    <div class="mosaic-item">
-                        <i data-lucide="brain"></i>
-                        <div>
-                            <h4>Strategic & Analytical Mindset</h4>
-                            <p>Sudoku enthusiast, puzzle solver, and student of modern business systems and analytical optimization.</p>
-                        </div>
-                    </div>
-                    <div class="mosaic-item">
-                        <i data-lucide="compass"></i>
-                        <div>
-                            <h4>Collaboration & Synergy</h4>
-                            <p>Thriving in flat structures, open dialogue environments, and cross-functional team projects.</p>
-                        </div>
-                    </div>
+            <div class="about-story-text">
+                <p>
+                    My spark for technology began early—guided by my grandfather, who first introduced me to computers and media writing. That curiosity evolved into a dedicated career path: earning a <strong>Higher Certificate in ICT Summa Cum Laude</strong> at CPUT, and currently finishing my final year in a <strong>BSc in Information Technology</strong> at North-West University while maintaining an <strong>80%+ distinction average</strong>.
+                </p>
+                <p>
+                    Rather than specializing in just one corner of tech, I operate across the full lifecycle—combining the technical rigor of <strong>Software Engineering</strong>, the predictive power of <strong>Data Science</strong>, the clarity of <strong>Business Intelligence</strong>, and the strategic alignment of <strong>Business Systems Analysis</strong>. As a former Systems Analysis & Design and Advanced UI Student Assistant, I thrive whether I am writing full-stack code, querying complex datasets, or designing high-level architecture.
+                </p>
+            </div>
+
+            <!-- Quick Snapshot Stats -->
+            <div class="about-stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">80%+</span>
+                    <span class="stat-label">NWU BSc IT Average</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">Top 15%</span>
+                    <span class="stat-label">Golden Key Scholar</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">top 1 in class</span>
+                    <span class="stat-label">Summa Cum Laude (CPUT)</span>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Right Side: Tech Arsenal Card & Mindset Cards -->
+        <div class="about-right-col">
+            <div class="interactive-hobbies-stack">
+
+                <!--Music player widget-->
+                <div class="glass-card hobby-card music-player-card">
+                    <div class="card-top">
+                        <span class="live-tag"><span class="pulse-dot"></span> CURRENTLY ON REPEAT</span>
+                        <i data-lucide="music" class="music-icon"></i>
+                    </div>
+                    
+                    <div class="track-display">
+                        <div class="sound-wave">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div>
+                            <h4 id="track-title">Old-School R&B Exclusives</h4>
+                            <p id="track-subtitle">Smooth rhythms for deep architecture focus & problem-solving.</p>
+                        </div>
+                    </div>
+
+                    <div class="genre-pills">
+                        <button class="genre-btn active" onclick="switchGenre('rnb', event)">R&B Vibes</button>
+                        <button class="genre-btn" onclick="switchGenre('amapiano', event)">Amapiano Flow</button>
+                        <button class="genre-btn" onclick="switchGenre('orchestral', event)">Orchestral Logic</button>
+                    </div>
+                </div>
+
+                <!--Mini Sudoku Grid Card Widget-->
+                <div class="glass-card hobby-card sudoku-card">
+                    <div class="sudoku-header">
+                        <div>
+                            <h4>Strategic Mindset</h4>
+                            <p>Sudoku Enthusiast & Structural Logic</p>
+                        </div>
+                        <i data-lucide="brain" class="brain-icon"></i>
+                    </div>
+
+                    <div class="sudoku-interactive-container">
+                        <div class="mini-sudoku-grid">
+                            <div class="s-cell">5</div>
+                            <div class="s-cell highlight">3</div>
+                            <div class="s-cell">9</div>
+                            <div class="s-cell highlight">1</div>
+                            <div class="s-cell active-cell">7</div>
+                            <div class="s-cell highlight">6</div>
+                            <div class="s-cell">4</div>
+                            <div class="s-cell highlight">8</div>
+                            <div class="s-cell">2</div>
+                        </div>
+                        <p class="sudoku-hint">
+                            <i data-lucide="sparkles"></i> "I approach database modeling and system logic with the same precision needed to balance a complex analytical grid."[cite: 1]
+                        </p>
+                    </div>
+                </div>
+
+                <!--Culture Card-->
+                <div class="glass-card hobby-card culture-card">
+                    <div class="culture-content">
+                        <i data-lucide="compass"></i>
+                        <div>
+                            <h4>Culture & Collaboration</h4>
+                            <p>Thriving in flat organizational structures built on open dialogue, project autonomy, and clear accountability.[cite: 1]</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+</section>
 
     <!-- Chapter II: Skills & Certifications -->
     <section id="skills" class="section">
-        <h2 class="section-title"><span>II.</span> Skills & Certifications</h2>
-        <div class="skills-grid">
-            
-            <div class="glass-card skill-category">
-                <div class="category-header">
-                    <i data-lucide="code"></i>
-                    <h3>Software Engineering & Design</h3>
-                </div>
-                <div class="tags">
-                    <span class="tag">C#</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">C++</span>
-                    <span class="tag">Systems Analysis & Design</span>
-                    <span class="tag">UI/UX Design</span>
-                </div>
-            </div>
+        <h2 class="section-title"><span>II.</span> Technical Mastery & Certifications</h2>
+        
+        <!--Infinite Tech Logo Marquee-->
+        <div class="skills-marquee-container">
+            <div class="skills-marquee-track">
 
-            <div class="glass-card skill-category">
-                <div class="category-header">
-                    <i data-lucide="bar-chart-3"></i>
-                    <h3>Data Intelligence & Analytics</h3>
-                </div>
-                <div class="tags">
-                    <span class="tag">Business Intelligence</span>
-                    <span class="tag">Data Analytics</span>
-                    <span class="tag">Relational Databases</span>
-                    <span class="tag">Data Modeling (ERD)</span>
-                    <span class="tag">Process Governance</span>
-                </div>
-            </div>
+                <!--First Set of Logos-->
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg" alt="C#"><span>C#</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python"><span>Python</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tableau.svg" alt="Tableau"><span>Tableau</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" alt="SQL"><span>SQL Databases</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg" alt="C++"><span>C++</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg" alt="Google"><span>Google Data Analytics</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/comptia.svg" alt="CompTia"><span>CompTia Security+</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" alt="Git"><span>Git Version Control</span> </div>
 
-            <div class="glass-card skill-category">
-                <div class="category-header">
-                    <i data-lucide="award"></i>
-                    <h3>Certifications & Training</h3>
-                </div>
-                <div class="tags">
-                    <span class="tag">Google Data Analytics Professional</span>
-                    <span class="tag">CompTIA Security+ Certified</span>
-                    <span class="tag">16-Week Intensive Cybersecurity Training</span>
-                </div>
+                <!--Duplicate Set for Seamless Continous Loop-->
+                  <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg" alt="C#"><span>C#</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python"><span>Python</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tableau.svg" alt="Tableau"><span>Tableau</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" alt="SQL"><span>SQL Databases</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg" alt="C++"><span>C++</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg" alt="Google"><span>Google Data Analytics</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/comptia.svg" alt="CompTia"><span>CompTia Security+</span> </div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" alt="Git"><span>Git Version Control</span> </div>
             </div>
-
-            <div class="glass-card skill-category">
-                <div class="category-header">
-                    <i data-lucide="users"></i>
-                    <h3>Leadership & Honors</h3>
-                </div>
-                <div class="tags">
-                    <span class="tag">Golden Key International Honour Society (Top 15%)</span>
-                    <span class="tag">Academic Consulting</span>
-                    <span class="tag">BridgeOne Peer Leadership</span>
-                    <span class="tag">Appointed Marker & Tutor</span>
-                </div>
-            </div>
-
         </div>
+
+        <!--Core Capabilities Matrix-->
+    <div class="skills-grid-modern">
+        
+        <!--Software Engineering & Architecture Card-->
+        <div class="glass-card skill-card-fancy">
+            <div class="category-header">
+                <i data-lucide="code-2" class="category-icon"></i>
+                <div>
+                    <h3>Software Engineering & Architecture</h3>
+                    <span class="sub-label">Full-Stack Development & Event-Driven Systems</span>
+                </div>
+            </div>
+            
+            <div class="skill-meter-list">
+                <div class="skill-meter-item">
+                    <div class="skill-info">
+                        <span class="tech-name"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/csharp.svg" alt="C#"> C# & GUI Programming</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 90%;"></div></div>
+                </div>
+
+                <div class="skill-meter-item">
+                    <div class="skill-info">
+                        <span class="tech-name"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" alt="SQL"> SQL & Database Systems</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 92%;"></div></div>
+                </div>
+
+                <div class="skill-meter-item">
+                    <div class="skill-info">
+                        <span class="tech-name"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python"> Python & C++</span>
+                        <span class="skill-level">Proficient</span>
+                    </div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 85%;"></div></div>
+                </div>
+
+                <div class="skill-meter-item">
+                    <div class="skill-info">
+                        <span class="tech-name"><i data-lucide="git-branch" style="width: 16px; height: 16px;"></i> Systems Analysis & Design (SDLC, ERD)</span>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 95%;"></div></div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Data Intelligence & Analytics Card-->
+        <div class="glass-card skill-card-fancy">
+            <div class="category-header">
+                <i data-lucide="line-chart" class="category-icon"></i>
+                <div>
+                    <h3>Data Intelligence & Analytics</h3>
+                    <span class="sub-label">Business Intelligence, Visualization & Governance</span>
+                </div>
+            </div>
+
+            <div class="skill-meter-list">
+                <div class="skill-meter-item">
+                    <div class="skill-info">
+                        <span class="tech-name"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tableau.svg" alt="Tableau"> Tableau Visual Analytics</span>
+                        <span class="skill-level">Proficient</span>
+                    </div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 88%;"></div></div>
+                </div>
+
+                <div class="skill-meter-item">
+                    <div class="skill-info">
+                        <span class="tech-name"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg" alt="Google"> Google Data Analytics</span>
+                        <span class="skill-level">Certified</span>
+                    </div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 90%;"></div></div>
+                </div>
+
+                <div class="skill-meter-item">
+                    <div class="skill-info">
+                        <span class="tech-name"><i data-lucide="database" style="width: 16px; height: 16px;"></i> Relational Data Modeling & ERD</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 92%;"></div></div>
+                </div>
+
+                <div class="skill-meter-item">
+                    <div class="skill-info">
+                        <span class="tech-name"><i data-lucide="shield-check" style="width: 16px; height: 16px;"></i> Process Governance & Optimization</span>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="meter-bar"><div class="meter-fill" style="width: 87%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Visual Certifications & Key Credentials Badge Grid-->
+    <div class="credentials-bar">
+        <div class="cert-badge-card">
+            <div class="badge-icon"><i data-lucide="award"></i></div>
+            <div class="badge-details">
+                <h4>CompTIA Security+ Certified</h4>
+                <p>16-Week Intensive Virtual Program & Certification</p>
+            </div>
+        </div>
+
+        <div class="cert-badge-card">
+            <div class="badge-icon"><i data-lucide="graduation-cap"></i></div>
+            <div class="badge-details">
+                <h4>Golden Key International Society</h4>
+                <p>Top 15% Academic Distinction Scholar</p>
+            </div>
+        </div>
+
+        <div class="cert-badge-card">
+            <div class="badge-icon"><i data-lucide="check-circle-2"></i></div>
+            <div class="badge-details">
+                <h4>Summa Cum Laude Graduate</h4>
+                <p>Higher Certificate in ICT (CPUT)</p>
+            </div>
+        </div>
+    </div>
+           
     </section>
 
     <!-- Chapter III: Experience -->
