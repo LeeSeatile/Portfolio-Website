@@ -28,7 +28,7 @@
 
 /* DARK MODE (System Preference Auto-Switch) */
 @media (prefers-color-scheme: dark) {
-    :root {
+   :root {
         --bg-main: #2A3B2C;
         --bg-card: #364938;
         --bg-card-border: rgba(244, 241, 225, 0.1);
@@ -42,6 +42,20 @@
         --text-dark-main: #F4F1E1;
         --text-dark-muted: #D3C9A3;
     }
+}
+
+:root {
+    --icon-filter: brightness(0) saturate(100%) invert(26%) sepia(18%) saturate(1012%) hue-rotate(85deg);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --icon-filter: brightness(0) invert(0.9);
+    }
+}
+
+.tech-name img {
+    filter: var(--icon-filter);
 }
 
 /* ==========================================================================
