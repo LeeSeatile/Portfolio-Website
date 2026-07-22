@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lee-Anne Seatile Ramokotjo | Virtual CV & Portfolio</title>
+    <title>Lee-Anne Seatile Ramokotjo | Portfolio & Virtual CV</title>
 
-    <!--Typography-->
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!--Lucid Icons-->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!--Link to the stylesheet-->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    
-    <!--Celestial vibe background-->
-    <div class="celestial-bg"></div>
 
-    <!--Navigation Header-->
+    <!-- Navigation Header -->
     <nav class="navbar">
         <div class="logo">
             <span class="symbol"><i data-lucide="gem"></i></span> Seatile Ramokotjo
@@ -30,134 +27,91 @@
 
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#skills-certs">Skills & Certs</a></li>
+            <li><a href="#skills">Skills & Certs</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#the-one" class="glow-link">THE ONE</a></li>
-            <li><a href="#academics">Academics</a></li>
-            <li><a href="#resume">Resume / CV</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#the-one" class="glow-link">"THE ONE"</a></li>
             <li><a href="#contact">Contact</a></li> 
         </ul>
     </nav>
 
-    <!--Hero Section-->
+    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-           <div class="badge">BSc IT Distinction Scholar • Tech & Business Strategist</div>
-            <h1>Lee-Anne Seatile Ramokotjo</h1>
-            <p class="tagline">The Catalyst at the Intersection of Technology, Data, and Business Strategy.</p>
-            <div class="dynamic-roles">
-                <span id="role-text">Software Engineer | Business Intelligence | Systems Architect</span>
+            <div class="hero-text">
+                <div class="badge">BSc IT Distinction Scholar • Tech & Business Strategist</div>
+                <h1>Lee-Anne Seatile Ramokotjo</h1>
+                <p class="tagline">The Catalyst at the Intersection of Technology, Data, and Business Strategy.</p>
+                <div class="dynamic-roles">
+                    <span id="role-text">Business Systems Analyst | Data & BI Analyst | Systems Architect</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#resume" class="btn primary-btn"><i data-lucide="file-text"></i> View Resume</a>
+                    <a href="#the-one" class="btn secondary-btn"><i data-lucide="sparkles"></i> "THE ONE" Chamber</a>
+                </div> 
             </div>
-            <div class="hero-actions">
-                <a href="#the-one" class="btn primary-btn">Initiate Transmutation ✨</a>
-                <a href="#projects" class="btn secondary-btn">View Artifacts</a>
-            </div> 
+            <div class="hero-visual">
+                <div class="abstract-shape">
+                    <img src="assets/profile.jpg" alt="Lee-Anne Seatile Ramokotjo" class="hero-img">
+                </div>
+            </div>
         </div>
-
     </header>
 
-    <!--Chapter I: The Catalyst (About Me)-->
-    <!--Section I-->
-
+    <!-- Chapter I: About Me -->
     <section id="about" class="section">
-
-        <h2 class="section-title"><span>I.</span> The Catalyst <span class="section-subtitle"> /About Me</span>
-        </h2>
-
+        <h2 class="section-title"><span>I.</span> The Catalyst (About)</h2>
         <div class="about-container">
-            <!--left side: profile pic & key quote-->
             <div class="about-quote">
-                <div class="profile-frame">
-                    <img src="assets/profile.jpg" alt="Lee-Anne Seatile Ramokotjo" class="profile-img">
-                </div>
-                <h3>Alchemizing Data for Business Insight</h3>
+                <h3>"I am the bridge between complex technical execution and clear business vision."</h3>
             </div>
-
-            <!--Right side: bio, target roles, direct contacts and hobbies-->
             <div class="about-content">
                 <p class="lead">
-                    Hi, I'm <strong>Lee-Anne Seatile Ramokotjo</strong>, a final-year BSc in Information Technology student at North-West University and a Higher certificate in ICT graduate (Summa Cum Laude). I specialize in designing and engineering full-cycle information systems, database architectures, enterprise logistics software (like <em>The Apex</em>), and community recycling tracking platforms (like <em>The Trashure</em>).</strong>
+                    Driven by clarity, open organizational dialogue, and high personal accountability, I transform raw requirements and unstructured data into scalable, user-centric systems.
                 </p>
 
-                <!--Target career path-->
-                <p class="lead" style="margin-bottom: 1.5rem;">
-                    <strong>Target Career Path:</strong> I am actively seeking high-impact opportunities in <strong> Software Engineering, Business Intelligence Analysis, Data Science, or Strategic Technology Consulting. </strong>
-                </p>
-
-                <!--Direct Contact Information Card-->
-                <div class="glass-card direct-contact-box" style="margin-bottom: 2rem; padding: 1.2rem 1.5rem;">
-                    <h4 style="color: var(--accent-primary); margin-bottom: 1rem; font-family: var(--font-heading); font-size: 1.1rem;">
-                        Direct Contacts
-                    </h4>
-
-                    <!--Contact app icons-->
-                    <!--Email icon-->
-                    <a href="mailto:seatilejm@gmail.com" class="app-icon-btn" title="Send Email" aria-label="Email">
-                        <i data-lucide="mail"></i>
-                    </a>
-
-                    <!--Phone App Icon-->
-                    <a href="tel:+27812605393" class="app-icon-btn" title="Call Me" aria-label="Phone">
-                        <i data-lucide="phone"></i>
-                    </a>
-
-                    <!--LinkedIn icon-->
-                    <a href="https://www.linkedin.com/in/lee-anne-seatile-ramokotjo-84161526b" target="_blank" rel="noopener noreferrer" class="app-icon-btn" title="LinkedIn Profile" aria-label="LinkedIn">
-                        <i data-lucide="linkedin"></i>
-                    </a>
-
-                    <!--Github App Icon-->
-                    <a href="https://github.com/LeeSeatile" target="_blank" rel="noopener noreferrer" class="app-icon-btn" title="GitHub Profile" aria-label="GitHub">
-                        <i data-lucide="github"></i>
-                    </a>
-
-                </div>
-             </div>
-
-        
-        </div>
-
-        <div class="glass-card about-card">
-            <p class="lead">
-                I am the bridge between technical execution and business vision. Driven by clarity, flat organizational synergy, and high personal accountability, I transform raw requirements and unstructured data into scalable, high-impact systems.
-            </p>
-
-            <div class="mosaic-grid">
-                <div class="mosaic-item">
-                    <i data-lucide="music"></i>
-                    <h4>Rhythm & Harmony</h4>
-                    <p>Old-school R&B, amapiano exclusives, and live orchestras keep my creative rhythm grounded.</p>
-                </div>
-                <div class="mosaic-item">
-                    <i data-lucide="brain"></i>
-                    <h4>Logic & Strategy</h4>
-                    <p>Avid player of Sudoku, word puzzles, and explorer of modern and classical philosophies.</p>
-                </div>
-                <div class="mosaic-item">
-                    <i data-lucide="compass"></i>
-                    <h4>Balance & Connection</h4>
-                    <p>Ambivert, intuitive advisor, solo picnic enthusiast, and lover of nature hikes with friends.</p>
+                <div class="mosaic-list">
+                    <div class="mosaic-item">
+                        <i data-lucide="music"></i>
+                        <div>
+                            <h4>Rhythm & Creative Flow</h4>
+                            <p>Old-school R&B, amapiano exclusives, and live orchestral compositions keep my problem-solving creative and grounded.</p>
+                        </div>
+                    </div>
+                    <div class="mosaic-item">
+                        <i data-lucide="brain"></i>
+                        <div>
+                            <h4>Strategic & Analytical Mindset</h4>
+                            <p>Sudoku enthusiast, puzzle solver, and student of modern business systems and analytical optimization.</p>
+                        </div>
+                    </div>
+                    <div class="mosaic-item">
+                        <i data-lucide="compass"></i>
+                        <div>
+                            <h4>Collaboration & Synergy</h4>
+                            <p>Thriving in flat structures, open dialogue environments, and cross-functional team projects.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--Chapter II: Primary Elements (Skills Matrix)-->
-    <!--Section II-->
+    <!-- Chapter II: Skills & Certifications -->
     <section id="skills" class="section">
-
-        <h2 class="section-title"><span>II.</span> Primary Elements <span class="section-subtitle"> / Education & Experience</span>
-        </h2>
+        <h2 class="section-title"><span>II.</span> Skills & Certifications</h2>
         <div class="skills-grid">
+            
             <div class="glass-card skill-category">
                 <div class="category-header">
                     <i data-lucide="code"></i>
-                    <h3>Software & Systems</h3>
+                    <h3>Software Engineering & Design</h3>
                 </div>
                 <div class="tags">
                     <span class="tag">C#</span>
+                    <span class="tag">SQL</span>
                     <span class="tag">Python</span>
                     <span class="tag">Java</span>
                     <span class="tag">C++</span>
@@ -168,52 +122,49 @@
 
             <div class="glass-card skill-category">
                 <div class="category-header">
-                    <i data-lucide="database"></i>
-                    <h3>Data & Intelligence</h3>
+                    <i data-lucide="bar-chart-3"></i>
+                    <h3>Data Intelligence & Analytics</h3>
                 </div>
                 <div class="tags">
-                    <span class="tag">Google Data Analytics Certified</span>
-                    <span class="tag">SQL & Database Management</span>
                     <span class="tag">Business Intelligence</span>
                     <span class="tag">Data Analytics</span>
-                    <span class="tag">Logic Optimization</span>
-                </div>
-            </div>
-
-            <div class="glass-card skill-category">
-                <div class="category-header">
-                    <i data-lucide="shield-check"></i>
-                    <h3>Security & Governance</h3>
-                </div>
-                <div class="tags">
-                    <span class="tag">CompTIA Security+ Certified</span>
-                    <span class="tag">Cybersecurity (16-Wk Intensive)</span>
-                    <span class="tag">System Resilience</span>
+                    <span class="tag">Relational Databases</span>
+                    <span class="tag">Data Modeling (ERD)</span>
                     <span class="tag">Process Governance</span>
                 </div>
             </div>
 
             <div class="glass-card skill-category">
                 <div class="category-header">
+                    <i data-lucide="award"></i>
+                    <h3>Certifications & Training</h3>
+                </div>
+                <div class="tags">
+                    <span class="tag">Google Data Analytics Professional</span>
+                    <span class="tag">CompTIA Security+ Certified</span>
+                    <span class="tag">16-Week Intensive Cybersecurity Training</span>
+                </div>
+            </div>
+
+            <div class="glass-card skill-category">
+                <div class="category-header">
                     <i data-lucide="users"></i>
-                    <h3>Honours & Leadership</h3>
+                    <h3>Leadership & Honors</h3>
                 </div>
                 <div class="tags">
                     <span class="tag">Golden Key International Honour Society (Top 15%)</span>
                     <span class="tag">Academic Consulting</span>
                     <span class="tag">BridgeOne Peer Leadership</span>
-                    <span class="tag">Systems Analysis Tutoring</span>
-                    <span class="tag">Strategic Guidance</span>
+                    <span class="tag">Appointed Marker & Tutor</span>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!--Chapter III: Alchemical Timeline (Experience & Academic Distinctions) -->
-    <!--Section III-->
+    <!-- Chapter III: Experience -->
     <section id="experience" class="section">
-        <h2 class="section-title"><span>III.</span> The Alchemical Timeline <span class="section-subtitle"> /Projects</span>
-        </h2>
+        <h2 class="section-title"><span>III.</span> Professional Experience</h2>
         <div class="timeline">
             
             <div class="timeline-item">
@@ -221,7 +172,7 @@
                 <div class="timeline-content glass-card">
                     <span class="date">Present</span>
                     <h3>BridgeOne Lead Peer Buddy & Academic Consultant</h3>
-                    <p class="role-desc">Providing strategic academic consulting, peer mentorship, and guiding students toward academic and career success.</p>
+                    <p class="role-desc">Delivering peer mentorship, strategic academic guidance, and leadership support to optimize student success.</p>
                 </div>
             </div>
 
@@ -229,8 +180,8 @@
                 <div class="timeline-marker"></div>
                 <div class="timeline-content glass-card">
                     <span class="date">Present</span>
-                    <h3>Student Assistant - Systems Analysis & Design</h3>
-                    <p class="role-desc">Evaluated complex Use-Case diagrams, entity-relationship models (ERDs), and full-cycle system architecture designs for students, maintaining high academic grading standards </p>
+                    <h3>Student Assistant & Appointed Marker — Systems Analysis & Design</h3>
+                    <p class="role-desc">Evaluating complex Use-Case diagrams, entity-relationship models (ERDs), and full-cycle system architecture designs, maintaining high academic grading standards.</p>
                 </div>
             </div>
 
@@ -238,52 +189,60 @@
                 <div class="timeline-marker"></div>
                 <div class="timeline-content glass-card">
                     <span class="date">2025</span>
-                    <h3>Student Assistant — Advanced UI Programming</h3>
-                    <p class="role-desc">Mentored students in object-oriented GUI development for scalable desktop applications in C#, event-driven architecture, and UI/UX best practices.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content glass-card accent-card">
-                    <span class="date">Final Year — NWU</span>
-                    <h3>BSc in Information Technology</h3>
-                    <p class="role-desc">Maintaining an <strong>80%+ Academic Distinction Average</strong> across advanced software engineering, databases, and analytics modules.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content glass-card accent-card">
-                    <span class="date">CPUT</span>
-                    <h3>Higher Certificate in ICT — Summa Cum Laude</h3>
-                    <p class="role-desc">Mastered core competencies across Programming Principles, Quantitative Techniques, and ICT Fundamentals, building early algorithmic and analytical problem-solving skills.</p>
+                    <h3>Student Assistant & Marker — Advanced UI Programming</h3>
+                    <p class="role-desc">Mentored students in object-oriented GUI development in C#, event-driven architecture, and modern UI/UX design principles.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!--Chapter IV: Transmuted Artifacts (Projects)-->
-    <!--Section IV-->
-    <section id="projects" class="section">
-        <h2 class="section-title"><span>IV.</span> Transmuted Artifacts <span class="section-subtitle"> /Projects</span>
-        </h2>
-        <div class="projects-grid">
+    <!-- Chapter IV: Education & Academic Records -->
+    <section id="education" class="section">
+        <h2 class="section-title"><span>IV.</span> Education & Academic Records</h2>
+        <div class="skills-grid">
 
-            <div class="glass-card project-card">
-                <div class="project-header">
-                    <i data-lucide="layers"></i>
-                    <h3>Street Kulture Konnect</h3>
+            <div class="glass-card">
+                <div class="category-header">
+                    <i data-lucide="graduation-cap"></i>
+                    <h3>BSc in Information Technology</h3>
                 </div>
-                <p class="project-role">Full-Stack Developer (UI/UX, Business Analyst, Engineer)</p>
-                <p>Cross-institutional collaborative project building a modern full-stack platform bridging culture, community, and digital commerce.</p>
-                <div class="tags">
-                    <span class="tag">Full-Stack</span>
-                    <span class="tag">UI/UX</span>
-                    <span class="tag">System Design</span>
+                <p class="role-desc"><strong>North-West University (NWU)</strong> • Final Year Scholar</p>
+                <p style="margin: 0.8rem 0; font-size: 0.95rem; color: var(--text-muted);">
+                    Maintaining an <strong>80%+ Distinction Average</strong> across advanced software development, database systems, and business information analysis.
+                </p>
+                <div style="margin-top: 1.5rem;">
+                    <!-- Replace 'academic_record_NWU.pdf' with your actual file path -->
+                    <a href="assets/academic_record_NWU.pdf" download class="btn secondary-btn" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+                        <i data-lucide="download"></i> Download Academic Record (PDF)
+                    </a>
                 </div>
             </div>
+
+            <div class="glass-card">
+                <div class="category-header">
+                    <i data-lucide="award"></i>
+                    <h3>Higher Certificate in ICT</h3>
+                </div>
+                <p class="role-desc"><strong>Cape Peninsula University of Technology (CPUT)</strong> • Summa Cum Laude</p>
+                <p style="margin: 0.8rem 0; font-size: 0.95rem; color: var(--text-muted);">
+                    Completed with Highest Honors (Summa Cum Laude), building core foundations in logic, quantitative techniques, and ICT fundamentals.
+                </p>
+                <div style="margin-top: 1.5rem;">
+                    <!-- Replace 'academic_record_CPUT.pdf' with your actual file path -->
+                    <a href="assets/academic_record_CPUT.pdf" download class="btn secondary-btn" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+                        <i data-lucide="download"></i> Download Academic Record (PDF)
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chapter V: Projects (Artifacts) -->
+    <section id="projects" class="section dark-section">
+        <h2 class="section-title"><span>V.</span> Featured Projects</h2>
+        <div class="projects-grid">
 
             <div class="glass-card project-card">
                 <div class="project-header">
@@ -291,7 +250,7 @@
                     <h3>The Apex</h3>
                 </div>
                 <p class="project-role">Lead System Architect</p>
-                <p>Year-long enterprise logistics and third-party marketplace information system designed for multi-tier concurrent workflows.</p>
+                <p>Year-long enterprise logistics and third-party marketplace information system engineered for multi-tier concurrent workflows.</p>
                 <div class="tags">
                     <span class="tag">Architecture</span>
                     <span class="tag">Logistics</span>
@@ -305,20 +264,51 @@
                     <h3>The Trashure</h3>
                 </div>
                 <p class="project-role">Full-Cycle System Engineer & Analyst</p>
-                <p>A high school community recycling tracker and incentive system engineered end-to-end with C# and SQL database management.</p>
+                <p>A community recycling tracking and incentive system engineered end-to-end with C# and SQL relational database management.</p>
                 <div class="tags">
                     <span class="tag">C#</span>
                     <span class="tag">SQL</span>
-                    <span class="tag">Community Impact</span>
+                    <span class="tag">Data Tracking</span>
                 </div>
             </div>
+
+            <div class="glass-card project-card">
+                <div class="project-header">
+                    <i data-lucide="layers"></i>
+                    <h3>Street Kulture Konnect</h3>
+                </div>
+                <p class="project-role">Full-Stack Developer & Analyst</p>
+                <p>Collaborative full-stack digital web platform bridging cultural commerce, community engagement, and modern UX.</p>
+                <div class="tags">
+                    <span class="tag">Full-Stack</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">Web</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!--Chapter V: THE ONE (Core Transmutation Feature-->
+    <!-- Chapter VI: Resume Download -->
+    <section id="resume" class="section">
+        <h2 class="section-title"><span>VI.</span> Curated Resume</h2>
+        <div class="glass-card" style="text-align: center; padding: 3rem 2rem;">
+            <i data-lucide="file-check-2" style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;"></i>
+            <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 0.8rem;">Ready for Comprehensive Review?</h3>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; font-size: 1rem;">
+                Download my latest formal Curriculum Vitae detailing academic distinctions, leadership appointments, and full project milestones.
+            </p>
+            <!-- Replace 'LeeAnne_Ramokotjo_CV.pdf' with your actual resume file path -->
+            <a href="assets/LeeAnne_Ramokotjo_CV.pdf" download class="btn primary-btn">
+                <i data-lucide="download"></i> Download Full CV / Resume (PDF)
+            </a>
+        </div>
+    </section>
+
+    <!-- Chapter VII: "THE ONE" (Transmutation Chamber) -->
     <section id="the-one" class="section transmutation-section">
-        <h2 class="section-title gold-title"><span>V.</span> "THE ONE"</h2>
-        <p class="transmutation-subtitle">Combine all raw elements to reveal the final alchemized profile.</p>
+        <h2 class="section-title"><span>VII.</span> "THE ONE"</h2>
+        <p class="transmutation-subtitle">Combine all core competencies to reveal the alchemized candidate profile.</p>
 
         <div class="glass-card transmutation-chamber"> 
             <div class="vessels-container">
@@ -328,11 +318,11 @@
                 </div>
                 <div class="vessel" data-element="data">
                     <i data-lucide="bar-chart-3"></i>
-                    <span>Data & BI Science</span>
+                    <span>Business Intelligence & Data</span>
                 </div>
                 <div class="vessel" data-element="security">
                     <i data-lucide="shield"></i>
-                    <span>Cybersecurity & Governance</span>
+                    <span>Systems & Governance</span>
                 </div>
                 <div class="vessel" data-element="leadership">
                     <i data-lucide="sparkles"></i>
@@ -345,35 +335,40 @@
             </button>
 
             <div id="transmutation-result" class="result-box hidden">
-                <div class="gold-border-glow"></div>
-                <h3>✨ RESULT: The Versatile Tech & Business Catalyst</h3>
+                <h3><i data-lucide="sparkles"></i> RESULT: The Tech & Business Systems Catalyst</h3>
                 <p>
-                    <strong>Lee-Anne Seatile Ramokotjo</strong> represents the complete fusion of software craft, data intelligence, and executive direction. Ready to excel seamlessly as a <em>Software Engineer, Business Intelligence Analyst, Data Scientist, or Systems Strategist</em>.
+                    <strong>Lee-Anne Seatile Ramokotjo</strong> combines data intelligence, software craft, and strategic business analysis. Ready to deliver immediate value as a <em>Business Systems Analyst, Data Analyst, BI Specialist, or Systems Architect</em>.
                 </p>
-                <a href="#contact" class="btn primary-btn">Schedule Interview / Connect</a>
+                <a href="#contact" class="btn primary-btn">Schedule Conversation / Connect</a>
             </div>
-
         </div>
     </section>
 
-    <!--Chapter VI: Contact-->
+    <!-- Chapter VIII: Contact -->
     <section id="contact" class="section">
-        <h2 class="section-title"><span>VI.</span> Transmission</h2>
+        <h2 class="section-title"><span>VIII.</span> Transmission (Contact)</h2>
         <div class="glass-card contact-card">
-            <p>Let's alchemize ideas into high-impact systems together!</p>
+            <p>Let's collaborate to build high-impact business systems and data solutions!</p>
             <div class="contact-links">
-                <a href="https://github.com" target="_blank" class="contact-btn"><i data-lucide="github"></i> GitHub</a>
-                <a href="https://linkedin.com" target="_blank" class="contact-btn"><i data-lucide="linkedin"></i> LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <i data-lucide="github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <i data-lucide="linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:example@email.com" class="contact-btn">
+                    <i data-lucide="mail"></i> Email
+                </a>
             </div>
         </div>
     </section>
 
-    <!--footer-->
+    <!-- Footer -->
     <footer>
-        <p><i>© 2026 Lee-Anne Seatile Ramokotjo • Built with Celestial Elegance </i></p>
+        <p>© 2026 Lee-Anne Seatile Ramokotjo • Designed with Celestial Elegance</p>
     </footer>
 
-    <!--JavaScript File-->
+    <!-- JavaScript File -->
     <script src="script.js"></script>
     <script>
         // Initialize Lucide icons
@@ -381,4 +376,4 @@
     </script>
 
 </body>
-</html> 
+</html>
