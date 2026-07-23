@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import apexLogo from '../assets/theApex.jpg';
 import trashureLogo from '../assets/Trashure.jpg';
 import indianaLogo from '../assets/Indiana.jpg';
-import skkLogo from '../assets/hero.png';
 
 export default function Projects() {
   const projectData = [
@@ -53,22 +52,6 @@ export default function Projects() {
         'Designed intuitive catalog navigation and product data structures.',
         'Structured back-end data flows for order processing and inventory updates.',
         'Ensured mobile responsiveness and high-performance UI rendering.'
-      ],
-      githubUrl: '#'
-    },
-    {
-      id: 'street-kulture-konnect',
-      title: 'Street Kulture Konnect',
-      subtitle: 'Community Platform & Interactive Web Build',
-      role: 'Front-End Developer & UI Specialist',
-      period: 'Collaborative Build',
-      logo: skkLogo,
-      description: 'An interactive web application connecting local culture, events, and community initiatives through modern web interfaces.',
-      tags: ['JavaScript', 'React', 'HTML/CSS', 'Git/GitHub', 'Responsive Design'],
-      highlights: [
-        'Built responsive front-end components tailored for dynamic user interaction.',
-        'Managed source control and collaborative code merges using GitHub.',
-        'Optimized site layout for seamless mobile and desktop accessibility.'
       ],
       githubUrl: '#'
     }

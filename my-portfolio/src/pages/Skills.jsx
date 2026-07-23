@@ -7,17 +7,23 @@ export default function Skills() {
     {
       title: 'CompTIA Security+',
       issuer: 'CompTIA',
-      details: 'Core security domains, identity management, cryptography, and network defense.'
+      details: 'Core security domains, identity management, cryptography, and network defense.',
+      // High-resolution CompTIA red badge icon
+      logo: '/comptia.png'
     },
     {
       title: '16-Week Intensive Cybersecurity Program',
       issuer: 'Virtual Training Academy',
-      details: 'Hands-on threat analysis, risk management, incident response, and security architecture.'
+      details: 'Hands-on threat analysis, risk management, incident response, and security architecture.',
+      // Clean security shield icon
+      logo: 'https://img.icons8.com/color/96/shield.png'
     },
     {
       title: 'Google Data Analytics Professional Certificate',
       issuer: 'Google',
-      details: 'Data cleaning, SQL querying, R programming, data visualization, and business analytics.'
+      details: 'Data cleaning, SQL querying, R programming, data visualization, and business analytics.',
+      // Official Google "G" logo
+      logo: '/coursera.png'
     }
   ];
 
@@ -35,7 +41,16 @@ export default function Skills() {
         <div className="home-stats-grid" style={{ marginTop: '1.5rem' }}>
           {certifications.map((cert, index) => (
             <div key={index} className="glass-card stat-card">
-              <span className="stat-number">📜</span>
+              <img 
+                src={cert.logo} 
+                alt={`${cert.title} logo`} 
+                style={{ 
+                  width: '48px', 
+                  height: '48px', 
+                  objectFit: 'contain', 
+                  marginBottom: '1rem' 
+                }} 
+              />
               <h4>{cert.title}</h4>
               <p><strong>{cert.issuer}</strong> — {cert.details}</p>
             </div>
