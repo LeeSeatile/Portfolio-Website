@@ -1,5 +1,6 @@
 import React from 'react';
 import TerminalCLI from '../components/TerminalCLI';
+import RoleCapabilities from '../components/RoleCapabilities';
 import profilePic from '../assets/profile.jpg';
 
 export default function Home({ setActiveTab }) {
@@ -7,43 +8,34 @@ export default function Home({ setActiveTab }) {
     <section className="section home-page">
       {/* Hero Header */}
       <div className="hero-banner">
-        {/* Creative Profile Badge */}
         <div className="alchemy-avatar-container">
           <div className="avatar-ring"></div>
           <div className="avatar-frame">
-            <img 
-              src={profilePic} 
-              alt="Lee-Anne Ramokotjo" 
-              className="avatar-img"
-            />
+            <img src={profilePic} alt="Lee-Anne Ramokotjo" className="avatar-img" />
           </div>
-          <span className="avatar-status-tag">✦ Systems Analyst</span>
+          <span className="avatar-status-tag">✦ Open to Tech Roles</span>
         </div>
 
-        <span className="hero-badge">Systems Analyst & Full-Stack Developer</span>
+        <span className="hero-badge">Software Engineer • Data Scientist • Systems & BI Analyst</span>
         <h1 className="hero-title">
-          Alchemizing Raw Operational Data into Strategic Business Value.
+          Architecting Intelligent Systems & Transforming Data into Value.
         </h1>
         <p className="hero-subtitle">
-          Final-year Information Technology student specializing in systems analysis, software engineering, and database architecture. I bridge technical complexity and actionable business intelligence.
+          Final-year Information Technology student specializing in software engineering, business systems analysis, data science, and BI analytics. Bridging technical complexity and corporate business strategy.
         </p>
 
-        {/* CTA Action Group */}
         <div className="hero-actions">
-          <button 
-            className="primary-btn hero-cta"
-            onClick={() => setActiveTab('projects')}
-          >
+          <button className="primary-btn hero-cta" onClick={() => setActiveTab('projects')}>
             Explore Interactive Projects 🚀
           </button>
-          <button 
-            className="secondary-btn hero-cta"
-            onClick={() => setActiveTab('education')}
-          >
+          <button className="secondary-btn hero-cta" onClick={() => setActiveTab('education')}>
             View Academic Credentials 🎓
           </button>
         </div>
       </div>
+
+      {/* NEW: Role Capabilities & Career Pathways Component */}
+      <RoleCapabilities />
 
       {/* Interactive CLI Section */}
       <div className="home-interactive-section">
@@ -69,7 +61,7 @@ export default function Home({ setActiveTab }) {
         <div className="glass-card stat-card">
           <span className="stat-number">C# • SQL • Python</span>
           <h4>Core Tech Stack</h4>
-          <p>Advanced competency in software logic, query optimization, and UI dev.</p>
+          <p>Advanced competency in software logic, query optimization, and data analytics.</p>
         </div>
       </div>
     </section>

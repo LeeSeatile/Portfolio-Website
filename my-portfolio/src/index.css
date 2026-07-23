@@ -403,3 +403,1265 @@ ul {
     border: 1px solid var(--accent-primary);
     white-space: nowrap;
 }
+
+/* Projects Page Styling */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--bg-card-border);
+    color: var(--text-muted);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-main);
+}
+
+.filter-btn.active {
+    background: var(--accent-primary);
+    color: #ffffff;
+    border-color: var(--accent-primary);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.8rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.8rem;
+    border-top: 3px solid var(--accent-primary);
+}
+
+.project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-badge {
+    background: var(--accent-secondary);
+    color: var(--text-main);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+}
+
+.project-cat-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-pop);
+    font-weight: 700;
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+
+.project-tagline {
+    font-size: 0.95rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.project-highlights h5 {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+}
+
+.project-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.2rem;
+}
+
+.project-highlights li {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
+.tech-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+}
+
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--bg-card-border);
+    color: var(--text-main);
+    font-size: 0.78rem;
+    font-family: var(--font-mono);
+    padding: 0.25rem 0.65rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.tech-logo-img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+/* Project GitHub Link Button */
+.project-footer-actions {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--bg-card-border);
+}
+
+.github-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--text-main);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.github-link-btn:hover {
+    background: var(--accent-pop);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(217, 93, 40, 0.25);
+}
+
+.github-btn-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(1); /* Makes dark icon white inside the dark button */
+}
+
+/* Capabilities Hub Styling */
+.capabilities-hub {
+    margin: 3rem 0;
+    padding: 2.5rem;
+}
+
+.capabilities-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.capabilities-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    color: var(--text-main);
+}
+
+.role-tabs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.role-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1.2rem;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--bg-card-border);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-align: left;
+}
+
+.role-tab-btn:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.role-tab-btn.active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    box-shadow: 0 6px 18px rgba(56, 94, 66, 0.25);
+}
+
+.role-tab-btn.active .role-tab-title {
+    color: #ffffff;
+}
+
+.role-tab-icon {
+    font-size: 1.3rem;
+}
+
+.role-tab-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.role-detail-card {
+    background: #ffffff;
+    border: 1px solid var(--bg-card-border);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 4px solid var(--accent-primary);
+}
+
+.role-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.role-badge {
+    background: rgba(217, 93, 40, 0.12);
+    color: var(--accent-pop);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+.role-detail-header h3 {
+    font-size: 1.6rem;
+    font-family: var(--font-heading);
+    color: var(--text-main);
+}
+
+.role-summary-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+}
+
+.role-grid-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 650px) {
+    .role-grid-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+.role-detail-col h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+}
+
+.role-list {
+    list-style: none;
+    padding: 0;
+}
+
+.role-list li {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+}
+
+.role-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Tech Stack Title */
+.tech-stack-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 1.5rem 0 1rem 0;
+    font-family: var(--font-mono);
+}
+
+/* 3D Flip Card Container */
+.flip-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.2rem;
+}
+
+.skill-flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 140px;
+    perspective: 1000px; /* Enables 3D Space */
+    cursor: pointer;
+}
+
+.skill-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 14px;
+}
+
+/* Flip Trigger on Hover */
+.skill-flip-card:hover .skill-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.skill-flip-front, .skill-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 14px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--bg-card-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Front Card Style */
+.skill-flip-front {
+    background: #ffffff;
+}
+
+.logo-avatar-frame {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    padding: 6px;
+}
+
+.skill-brand-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.skill-brand-name {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--text-main);
+}
+
+.skill-hint-tag {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    font-family: var(--font-mono);
+}
+
+/* Back Card Style */
+.skill-flip-back {
+    background: linear-gradient(135deg, var(--accent-primary), #2c4a34);
+    color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.skill-metric-badge {
+    background: var(--accent-pop);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-detail-text {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: #f0f4f1;
+    margin: 0;
+}
+
+/* Intuitive Hover Instruction Banner */
+.flip-instruction-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(56, 94, 66, 0.08);
+    border: 1px dashed var(--accent-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    margin-bottom: 1.2rem;
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 0.6; }
+}
+
+.flip-icon {
+    font-size: 1rem;
+}
+
+/* 3D Flip Card Container */
+.flip-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 1.2rem;
+}
+
+.skill-flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 120px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.skill-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 14px;
+}
+
+.skill-flip-card:hover .skill-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.skill-flip-front, .skill-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 14px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--bg-card-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Front Card Style */
+.skill-flip-front {
+    background: #ffffff;
+}
+
+.skill-tech-badge {
+    padding: 0.7rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Back Card Style */
+.skill-flip-back {
+    background: linear-gradient(135deg, #1b3022, #385e42);
+    color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.skill-metric-badge {
+    background: var(--accent-pop);
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-detail-text {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: #f0f4f1;
+    margin: 0;
+}
+
+/* Card Container */
+.flip-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.2rem;
+}
+
+.skill-flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 140px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.skill-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 14px;
+}
+
+.skill-flip-card:hover .skill-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.skill-flip-front, .skill-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 14px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--bg-card-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Front Card Styling */
+.skill-flip-front {
+    background: #ffffff;
+    position: relative;
+}
+
+.flip-hint-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+.brand-icon-wrapper {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.6rem;
+}
+
+.skill-brand-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.skill-brand-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+/* Back Card Styling */
+.skill-flip-back {
+    background: linear-gradient(135deg, #1b3022, #385e42);
+    color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.skill-metric-badge {
+    background: var(--accent-pop);
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.skill-detail-text {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: #f0f4f1;
+    margin: 0;
+}
+
+/* Container & Grid Setup */
+.flip-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* Base Flip Card Container */
+.skill-flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 160px;
+    perspective: 1000px; /* Enables 3D perspective */
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* Elevate z-index slightly on hover to prevent clipping glitches */
+.skill-flip-card:hover {
+    z-index: 10;
+}
+
+.skill-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 16px;
+}
+
+/* Smooth 3D Flip on Hover */
+.skill-flip-card:hover .skill-flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Common Card Face Rules */
+.skill-flip-front, 
+.skill-flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Key for smooth 3D flip */
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--bg-card-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box; /* Keeps dimensions exact */
+    overflow: hidden; /* Prevents contents from overflowing into neighbor cards */
+}
+
+/* Front Card Design */
+.skill-flip-front {
+    background: #ffffff;
+}
+
+.flip-hint-badge {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+.react-icon-frame {
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-brand-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+/* Back Card Design */
+.skill-flip-back {
+    background: linear-gradient(135deg, #1b3022, #385e42);
+    color: #ffffff;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.skill-metric-badge {
+    background: var(--accent-pop);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.2rem 0.55rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-detail-text {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: #f0f4f1;
+    margin: 0;
+}
+
+/* Projects Section Styling */
+.projects-section {
+    margin: 3rem 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid var(--bg-card-border);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border-color: #385e42;
+}
+
+/* Header Stack Fix */
+.project-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.project-role-badge {
+    background: rgba(56, 94, 66, 0.1);
+    color: #1b3022;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-period {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.project-title {
+    font-size: 1.6rem;
+    color: var(--text-main);
+    margin: 0.4rem 0 0.1rem 0;
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+.project-subtitle {
+    font-size: 0.95rem;
+    color: #385e42;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.project-description {
+    font-size: 0.92rem;
+    color: #4a5568;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.project-highlights h4 {
+    font-size: 0.88rem;
+    color: var(--text-main);
+    margin-bottom: 0.6rem;
+}
+
+.project-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.project-highlights li {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+    display: flex;
+    gap: 0.5rem;
+    line-height: 1.4;
+}
+
+.project-highlights li span {
+    color: #385e42;
+    font-weight: bold;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tag-pill {
+    background: #f0f4f1;
+    color: #2b4732;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 8px;
+}
+
+.project-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-project {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.btn-secondary {
+    background: #f0f2f0;
+    color: #1b3022;
+}
+
+.btn-secondary:hover {
+    background: #e1e6e2;
+}
+
+/* Projects Section Styling - Horizontal Scroll Layout */
+.projects-section {
+    margin: 3rem 0;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding-bottom: 2rem;
+    scrollbar-width: thin; /* Clean Firefox scrollbar */
+}
+
+/* Base grid structure */
+.projects-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0.5rem; /* Add some padding for the hover state movement */
+    min-width: max-content; /* Critical for horizontal scroll */
+}
+
+/* Define fixed-width cards */
+.project-card {
+    background: #ffffff;
+    border: 1px solid var(--bg-card-border);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    
+    /* Strict dimensions for card sizing in scroll */
+    flex: 0 0 320px; 
+    width: 320px;
+    height: 580px; /* Optional, gives consistent height */
+
+    /* 3D tilt prep */
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border-color: #385e42;
+}
+
+/* Card Header Fix */
+.project-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.project-role-badge {
+    background: rgba(56, 94, 66, 0.1);
+    color: #1b3022;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-period {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* --- THE FIX FOR BIG PICTURES --- */
+.project-title-container {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+    width: 100%;
+}
+
+.project-logo-badge {
+    /* STRICT size for the frame */
+    width: 60px;
+    height: 60px;
+    min-width: 60px; /* Prevents squishing */
+    border-radius: 14px;
+    background: #f8faf8;
+    border: 1px solid #e2e8e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Internal whitespace */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    
+    /* 3D push-out prep */
+    transform: translateZ(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Push the small badge further out on hover */
+.project-card:hover .project-logo-badge {
+    transform: translateZ(40px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(58, 94, 66, 0.15);
+    border-color: #385e42;
+}
+
+/* Small image constraint inside the badge */
+.project-logo-badge img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures logo isn't cropped or distorted */
+}
+/* ---------------------------------- */
+
+.project-title {
+    font-size: 1.6rem;
+    color: var(--text-main);
+    margin: 0.4rem 0 0.1rem 0;
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+.project-subtitle {
+    font-size: 0.95rem;
+    color: #385e42;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.project-description {
+    font-size: 0.92rem;
+    color: #4a5568;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    flex-grow: 1; /* Pushes lower content down */
+}
+
+.project-highlights h4 {
+    font-size: 0.88rem;
+    color: var(--text-main);
+    margin-bottom: 0.6rem;
+}
+
+.project-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.project-highlights li {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+    display: flex;
+    gap: 0.5rem;
+    line-height: 1.4;
+}
+
+.project-highlights li span {
+    color: #385e42;
+    font-weight: bold;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tag-pill {
+    background: #f0f4f1;
+    color: #2b4732;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 8px;
+}
+
+.project-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto; /* Ensures actions align at bottom */
+}
+
+.btn-project {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.btn-secondary {
+    background: #f0f2f0;
+    color: #1b3022;
+}
+
+.btn-secondary:hover {
+    background: #e1e6e2;
+}
+
+/* Custom Scrollbar for better UI */
+.projects-section::-webkit-scrollbar {
+    height: 10px;
+}
+
+.projects-section::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.projects-section::-webkit-scrollbar-thumb {
+    background: rgba(56, 94, 66, 0.4);
+    border-radius: 10px;
+}
+
+.projects-section::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 94, 66, 0.6);
+}
+
+/* Terminal Section Styling */
+.terminal-section {
+    margin: 4rem 0;
+}
+
+.terminal-window {
+    background: #1e241e;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    border: 1px solid #2d382e;
+    max-width: 850px;
+    margin: 2rem auto 0 auto;
+}
+
+.terminal-topbar {
+    background: #141814;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #283329;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.btn-dot.close { background: #ff5f56; }
+.btn-dot.minimize { background: #ffbd2e; }
+.btn-dot.maximize { background: #27c93f; }
+
+.terminal-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8fa893;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.terminal-body {
+    padding: 1.5rem;
+    min-height: 280px;
+    max-height: 400px;
+    overflow-y: auto;
+    color: #e2ebe3;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.terminal-line pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: inherit;
+}
+
+.terminal-line.system {
+    color: #88a38c;
+}
+
+.terminal-line.user {
+    color: #a3e6b1;
+    font-weight: 600;
+}
+
+.terminal-line.response {
+    color: #d1ded3;
+    line-height: 1.5;
+}
+
+.terminal-line.error {
+    color: #ff8b8b;
+}
+
+.terminal-input-form {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+}
+
+.terminal-prompt {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+/* Custom Scrollbar for Terminal */
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #344536;
+    border-radius: 4px;
+}
