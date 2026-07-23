@@ -1,4 +1,5 @@
 import React from 'react';
+import cvFile from '../assets/CV.pdf';
 
 export default function Navbar({ activeTab, setActiveTab }) {
   return (
@@ -18,25 +19,11 @@ export default function Navbar({ activeTab, setActiveTab }) {
         <button className={activeTab === 'projects' ? 'nav-btn active' : 'nav-btn'} onClick={() => setActiveTab('projects')}>Projects</button>
         <button className={activeTab === 'contact' ? 'nav-btn active' : 'nav-btn'} onClick={() => setActiveTab('contact')}>Contact</button>
         
-        {/* Recruiter Quick CV Download Button */}
         <a 
-          href="/resume.pdf" 
+          href={cvFile} 
           target="_blank" 
-          rel="noreferrer" 
-          style={{ 
-            background: '#2b4732', 
-            color: '#ffffff', 
-            padding: '0.4rem 0.9rem', 
-            borderRadius: '20px', 
-            fontSize: '0.8rem', 
-            fontWeight: '600', 
-            textDecoration: 'none', 
-            display: 'flex', 
-            alignItem: 'center', 
-            gap: '5px',
-            marginLeft: '0.5rem',
-            boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
-          }}
+          rel="noopener noreferrer" 
+          className="nav-btn resume-btn"
         >
           📄 Resume
         </a>

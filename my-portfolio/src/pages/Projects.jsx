@@ -21,7 +21,7 @@ export default function Projects() {
         'Executed end-to-end relational modeling (3NF, ERDs, table schemas).',
         'Authored and validated complete Oracle SQL DDL/DML scripts.'
       ],
-      githubUrl: '#'
+      githubUrl: 'https://github.com/LeeSeatile/THE-APEX.git'
     },
     {
       id: 'the-trashure',
@@ -37,23 +37,23 @@ export default function Projects() {
         'Applied 3NF relational normalization to eliminate redundancy.',
         'Integrated custom analytics dashboards for eco-impact reporting.'
       ],
-      githubUrl: '#'
+      githubUrl: 'https://github.com/CMPG223-Project-Group-60/RecyclingIS.git'
     },
     {
       id: 'indiana-essentials',
       title: 'Indiana Essentials',
       subtitle: 'Web Platform & E-Commerce Logic',
       role: 'Systems Analyst & Developer',
-      period: 'Featured Project',
+      period: '2023',
       logo: indianaLogo,
       description: 'A tailored web solution designed for product distribution, inventory management, and streamlined consumer interactions.',
-      tags: ['JavaScript', 'React', 'Database Design', 'UI/UX', 'Systems Analysis'],
+      tags: ['JavaScript', 'UI/UX', 'CSS3'],
       highlights: [
         'Designed intuitive catalog navigation and product data structures.',
         'Structured back-end data flows for order processing and inventory updates.',
         'Ensured mobile responsiveness and high-performance UI rendering.'
       ],
-      githubUrl: '#'
+      githubUrl: 'https://github.com/LeeSeatile/IndianaEssentials.git'
     }
   ];
 
