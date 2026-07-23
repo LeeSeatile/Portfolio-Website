@@ -1,22 +1,14 @@
 import React from 'react';
-import { FaReact, FaJs, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="footer-container">
-        <p>© {new Date().getFullYear()} Lee-Anne Ramokotjo. All rights reserved.</p>
-        
-        {/* React & AI Learning Credit Badge */}
-        <div className="tech-credit-badge">
-          <span>First React build engineered using</span>
-          <FaReact style={{ color: '#61DAFB', fontSize: '1.2rem' }} title="React" />
-          <FaJs style={{ color: '#F7DF1E', fontSize: '1.2rem' }} title="JavaScript" />
-          <FaHtml5 style={{ color: '#E34F26', fontSize: '1.2rem' }} title="HTML5" />
-          <FaCss3Alt style={{ color: '#1572B6', fontSize: '1.2rem' }} title="CSS3" />
-          <span>with AI collaboration & guidance 🤖</span>
-        </div>
-      </div>
+    <footer style={{ textAlign: 'center', padding: '2.5rem 1rem', marginTop: '4rem', borderTop: '1px solid #e2e8e4', color: '#64748b', fontSize: '0.85rem' }}>
+      <p style={{ margin: '0 0 0.4rem 0', fontWeight: '600', color: '#2b4732' }}>
+        © 2026 Lee-Anne Seatile Ramokotjo • All Rights Reserved
+      </p>
+      <p style={{ margin: 0 }}>
+        Built with React & Vite with the assistance of AI (proudly crafted as my first React portfolio project!).
+      </p>
     </footer>
   );
 }

@@ -1,124 +1,119 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-export default function Terminal() {
+export default function TerminalCLI() {
   const [input, setInput] = useState('');
   const [history, setHistory] = useState([
-    { type: 'system', text: 'Welcome to Lee-Anne\'s Interactive CLI v1.0.0' },
-    { type: 'system', text: 'Type "help" to see available commands.' }
+    { type: 'output', text: 'Welcome to Lee-Anne\'s Portfolio CLI v1.0.0' },
+    { type: 'output', text: 'Type "help" to see available commands or click quick suggestions below.' }
   ]);
-  
-  const bottomRef = useRef(null);
+  const terminalBodyRef = useRef(null);
+
+  const scrollToTerminalBottom = () => {
+    if (terminalBodyRef.current) {
+      terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
+    }
+  };
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    scrollToTerminalBottom();
   }, [history]);
 
-  const handleCommand = (e) => {
-    e.preventDefault();
-    const cmd = input.trim().toLowerCase();
-    if (!cmd) return;
+  const handleCommand = (cmd) => {
+    const cleanCmd = cmd.trim().toLowerCase();
+    let response = '';
 
-    const newHistory = [...history, { type: 'user', text: `$ ${input}` }];
-
-    switch (cmd) {
+    switch (cleanCmd) {
       case 'help':
-        newHistory.push({
-          type: 'response',
-          text: `Available commands:
-  • help      - Show list of available commands
-  • about     - Learn about Lee-Anne's background
-  • skills    - Display core technical competencies
-  • projects  - List featured systems & architectural builds
-  • contact   - Get contact links
-  • clear     - Clear the terminal terminal output`
-        });
+        response = 'Available commands: about, skills, projects, contact, clear';
         break;
-
       case 'about':
-        newHistory.push({
-          type: 'response',
-          text: 'Lee-Anne Ramokotjo | Final-year BSc IT Student at NWU.\nFocused on Systems Analysis, Data Analysis, and Database Design.'
-        });
+        response = 'Lee-Anne Seatile Ramokotjo — Final-year BSc IT student at NWU, passionate about bridging technical architecture and business strategy.';
         break;
-
       case 'skills':
-        newHistory.push({
-          type: 'response',
-          text: 'Core Stack: C#, Oracle SQL, Python, Java, C++, Systems Analysis & Design (SDLC), 3NF Relational Modeling.'
-        });
+        response = 'Core Stack: React, C#, SQL, Python, Java, Oracle SQL, 3NF Normalization, Data/BI Analysis, CompTIA Security+.';
         break;
-
       case 'projects':
-        newHistory.push({
-          type: 'response',
-          text: 'Featured Builds:\n 1. The Apex - Logistics & Fashion Marketplace System Architecture (Oracle SQL, Full SDLC)\n 2. The Trashure - Recycling Tracking Information System (C#, SQL, Data Analytics)\n 3. Indiana Essentials - E-Commerce & Product Distribution Build\n 4. Street Kulture Konnect - Community Interactive Web Platform'
-        });
+        response = 'PROJECTS BREAKDOWN:\n' +
+                   '1. "The Apex" (Logistics & Marketplace):\n' +
+                   '   - Problem: Complex supply chain coordination and fragmented vendor data.\n' +
+                   '   - Solution: Designed system architecture and rigorous 3NF relational models.\n' +
+                   '   - Result: Seamless logistics tracking and robust third-party integration.\n\n' +
+                   '2. "The Trashure" (Recycling Tracking Info System):\n' +
+                   '   - Problem: Inefficient tracking of recyclable waste collection cycles.\n' +
+                   '   - Solution: Implemented full-cycle information system using C# and SQL.\n' +
+                   '   - Result: Streamlined data collection and transparent processing visibility.';
         break;
-
       case 'contact':
-        newHistory.push({
-          type: 'response',
-          text: 'Email: available via contact section below\nLinkedIn & GitHub available in header.'
-        });
+        response = 'Email: seatilejm@gmail.com | LinkedIn: linkedin.com/in/lee-anne-seatile-ramokotjo-84161526b | GitHub: github.com/LeeSeatile';
         break;
-
       case 'clear':
         setHistory([]);
-        setInput('');
         return;
-
       default:
-        newHistory.push({
-          type: 'error',
-          text: `Command not recognized: "${cmd}". Type "help" for a list of commands.`
-        });
-        break;
+        response = `Command not recognized: "${cmd}". Type "help" for a list of commands.`;
     }
 
-    setHistory(newHistory);
+    setHistory(prev => [
+      ...prev,
+      { type: 'input', text: `guest@lee-anne:~$ ${cmd}` },
+      { type: 'output', text: response }
+    ]);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+    handleCommand(input);
     setInput('');
   };
 
   return (
-    <section id="terminal" className="terminal-section">
-      <div className="capabilities-header">
-        <span className="hero-badge">Developer Console</span>
-        <h2>Interactive Terminal</h2>
-        <p>Prefer a CLI? Type commands below to query my portfolio directly:</p>
-      </div>
-
-      <div className="terminal-window">
-        <div className="terminal-topbar">
-          <div className="terminal-buttons">
-            <span className="btn-dot close"></span>
-            <span className="btn-dot minimize"></span>
-            <span className="btn-dot maximize"></span>
+    <div className="terminal-wrapper" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
+      <div className="terminal-box" style={{ background: '#121612', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.15)', border: '1px solid #2b4732' }}>
+        <div className="terminal-topbar" style={{ background: '#1a221a', padding: '0.6rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #2b4732' }}>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ff5f56', display: 'inline-block' }}></span>
+            <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffbd2e', display: 'inline-block' }}></span>
+            <span style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f', display: 'inline-block' }}></span>
           </div>
-          <span className="terminal-title">lee-anne@portfolio:~</span>
+          <span style={{ color: '#8fa893', fontSize: '0.8rem', fontFamily: 'monospace' }}>lee-anne@portfolio:~</span>
         </div>
 
-        <div className="terminal-body">
-          {history.map((item, idx) => (
-            <div key={idx} className={`terminal-line ${item.type}`}>
-              <pre>{item.text}</pre>
+        <div ref={terminalBodyRef} className="terminal-body" style={{ padding: '1.2rem', height: '260px', overflowY: 'auto', fontFamily: 'monospace', fontSize: '0.85rem', color: '#d1ded3', whiteSpace: 'pre-line' }}>
+          {history.map((item, index) => (
+            <div key={index} style={{ marginBottom: '0.8rem', lineHeight: '1.4' }}>
+              {item.type === 'input' ? (
+                <span style={{ color: '#27c93f' }}>{item.text}</span>
+              ) : (
+                <span style={{ color: '#a3c1a6' }}>{item.text}</span>
+              )}
             </div>
           ))}
-
-          <form onSubmit={handleCommand} className="terminal-input-form">
-            <span className="terminal-prompt">guest@lee-anne:~$</span>
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              className="terminal-input"
-              placeholder="type help..."
-              autoCapitalize="off"
-              autoComplete="off"
-            />
-          </form>
-          <div ref={bottomRef} />
         </div>
+
+        <form onSubmit={onSubmit} style={{ display: 'flex', borderTop: '1px solid #2b4732', background: '#161d16' }}>
+          <span style={{ padding: '0.8rem 0 0.8rem 1rem', color: '#27c93f', fontFamily: 'monospace', fontSize: '0.85rem' }}>guest@lee-anne:~$</span>
+          <input 
+            type="text" 
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="try typing 'projects', 'skills', 'contact'..."
+            style={{ flex: 1, background: 'transparent', border: 'none', padding: '0.8rem', color: '#ffffff', fontFamily: 'monospace', fontSize: '0.85rem', outline: 'none' }}
+          />
+        </form>
       </div>
-    </section>
+
+      <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.8rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+        {['about', 'skills', 'projects', 'contact', 'clear'].map((cmd) => (
+          <button 
+            key={cmd} 
+            onClick={() => handleCommand(cmd)}
+            style={{ background: '#f0f4f1', border: '1px solid #d2ded5', color: '#2b4732', padding: '0.3rem 0.8rem', borderRadius: '15px', fontSize: '0.75rem', cursor: 'pointer', fontWeight: '600' }}
+          >
+            {cmd}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
