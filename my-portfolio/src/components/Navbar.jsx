@@ -24,6 +24,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
           target="_blank" 
           rel="noopener noreferrer" 
           className="nav-btn resume-btn"
+          style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
         >
           📄 Resume
         </a>
