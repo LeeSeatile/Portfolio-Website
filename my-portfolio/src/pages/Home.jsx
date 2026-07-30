@@ -1,4 +1,14 @@
 import React, { useState } from 'react';
+import { 
+  Lightbulb, 
+  Settings, 
+  Sprout, 
+  Sparkles, 
+  Rocket, 
+  TrendingUp, 
+  ChevronLeft, 
+  ChevronRight 
+} from 'lucide-react';
 import TerminalCLI from '../components/TerminalCLI';
 import profilePic from '../assets/profile.jpg';
 
@@ -8,7 +18,7 @@ export default function Home({ setActiveTab }) {
   const chapters = [
     {
       title: "Chapter 1: Spark in Tech & Business",
-      icon: "💡",
+      icon: <Lightbulb size={36} color="#b45309" />,
       accentBg: "#fcf8f2", // Soft warm amber tint
       accentBorder: "#f0dcc8",
       accentBadge: "#b45309",
@@ -16,7 +26,7 @@ export default function Home({ setActiveTab }) {
     },
     {
       title: "Chapter 2: Capabilities & Passion",
-      icon: "⚙️",
+      icon: <Settings size={36} color="#2b4732" />,
       accentBg: "#f2f7f4", // Soft sage mint tint
       accentBorder: "#d2ded5",
       accentBadge: "#2b4732",
@@ -24,7 +34,7 @@ export default function Home({ setActiveTab }) {
     },
     {
       title: "Chapter 3: Entrepreneurship & Hobbies",
-      icon: "🌱",
+      icon: <Sprout size={36} color="#9c4221" />,
       accentBg: "#faf4f2", // Soft earthy terracotta tint
       accentBorder: "#ebd3cc",
       accentBadge: "#9c4221",
@@ -51,7 +61,9 @@ export default function Home({ setActiveTab }) {
           <div className="avatar-frame">
             <img src={profilePic} alt="Lee-Anne Seatile Ramokotjo" className="avatar-img" />
           </div>
-          <span className="avatar-status-tag">✦ Open to Tech Roles</span>
+          <span className="avatar-status-tag" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+            <Sparkles size={13} color="#27c93f" /> Open to Tech Roles
+          </span>
         </div>
 
         <span className="hero-badge">Software Engineer • Data Scientist • Systems & BI Analyst</span>
@@ -63,11 +75,11 @@ export default function Home({ setActiveTab }) {
         </p>
 
         <div className="hero-actions">
-          <button className="primary-btn hero-cta" onClick={() => setActiveTab('projects')}>
-            Explore Interactive Projects 🚀
+          <button className="primary-btn hero-cta" onClick={() => setActiveTab('projects')} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            Explore Interactive Projects <Rocket size={18} />
           </button>
-          <button className="secondary-btn hero-cta" onClick={() => setActiveTab('experience')}>
-            View Experience Timeline 📈
+          <button className="secondary-btn hero-cta" onClick={() => setActiveTab('experience')} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            View Experience Timeline <TrendingUp size={18} />
           </button>
         </div>
       </div>
@@ -86,7 +98,7 @@ export default function Home({ setActiveTab }) {
       <div className="about-section" style={{ margin: '4rem auto', maxWidth: '850px', textAlign: 'center' }}>
         <div className="capabilities-header" style={{ marginBottom: '1.5rem' }}>
           <span className="hero-badge" style={{ marginBottom: '0.5rem', display: 'inline-block' }}>My Story & Drive</span>
-          <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--text-main)' }}>About Me (Interactive Book)</h2>
+          <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--text-main)' }}>About Me</h2>
           <p style={{ color: '#4a5568', fontSize: '0.9rem' }}>Page through my background below:</p>
         </div>
 
@@ -106,7 +118,7 @@ export default function Home({ setActiveTab }) {
           }}
         >
           <div>
-            <div style={{ fontSize: '2.5rem', marginBottom: '0.6rem' }}>{activeData.icon}</div>
+            <div style={{ marginBottom: '0.6rem', display: 'flex', justifyContent: 'center' }}>{activeData.icon}</div>
             <h3 style={{ color: activeData.accentBadge, fontSize: '1.4rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>
               {activeData.title}
             </h3>
@@ -118,18 +130,18 @@ export default function Home({ setActiveTab }) {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2rem', borderTop: `1px solid ${activeData.accentBorder}`, paddingTop: '1rem' }}>
             <button 
               onClick={prevChapter}
-              style={{ background: '#ffffff', border: `1px solid ${activeData.accentBorder}`, color: activeData.accentBadge, padding: '0.5rem 1.2rem', borderRadius: '20px', cursor: 'pointer', fontWeight: '600', fontSize: '0.85rem' }}
+              style={{ background: '#ffffff', border: `1px solid ${activeData.accentBorder}`, color: activeData.accentBadge, padding: '0.5rem 1.2rem', borderRadius: '20px', cursor: 'pointer', fontWeight: '600', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
             >
-              ← Previous Page
+              <ChevronLeft size={16} /> Previous Page
             </button>
             <span style={{ fontSize: '0.85rem', color: '#64748b', fontWeight: '600' }}>
               Page {currentChapter + 1} of {chapters.length}
             </span>
             <button 
               onClick={nextChapter}
-              style={{ background: activeData.accentBadge, border: 'none', color: '#ffffff', padding: '0.5rem 1.2rem', borderRadius: '20px', cursor: 'pointer', fontWeight: '600', fontSize: '0.85rem' }}
+              style={{ background: activeData.accentBadge, border: 'none', color: '#ffffff', padding: '0.5rem 1.2rem', borderRadius: '20px', cursor: 'pointer', fontWeight: '600', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
             >
-              Next Page →
+              Next Page <ChevronRight size={16} />
             </button>
           </div>
         </div>

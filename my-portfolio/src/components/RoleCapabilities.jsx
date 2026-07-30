@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Laptop, FlaskConical, BarChart3, Settings2, RefreshCw } from 'lucide-react';
 
 // Embedded Pure SVG Icons - 100% reliable, zero network/package errors
 const Icons = {
@@ -106,7 +107,7 @@ export default function RoleCapabilities() {
       id: 'software-engineer',
       title: 'Software Engineer',
       badge: 'Full-Stack & Logic',
-      icon: '💻',
+      icon: <Laptop size={20} />,
       summary: 'Building modular software architectures, object-oriented backends, and responsive React UI applications.',
       skills: [
         { name: 'React', icon: Icons.React, detail: 'Interactive UI Components, State & Hooks', metric: 'Front-End' },
@@ -122,7 +123,7 @@ export default function RoleCapabilities() {
       id: 'data-scientist',
       title: 'Data Scientist',
       badge: 'Predictive & Analytics',
-      icon: '🧪',
+      icon: <FlaskConical size={20} />,
       summary: 'Extracting patterns from complex datasets using statistical models, query optimization, and Python data pipelines.',
       skills: [
         { name: 'Python', icon: Icons.Python, detail: 'Pandas, Data Cleaning, Wrangling & Analytics', metric: 'Advanced' },
@@ -136,7 +137,7 @@ export default function RoleCapabilities() {
       id: 'bi-analyst',
       title: 'BI Analyst',
       badge: 'Strategic Intelligence',
-      icon: '📊',
+      icon: <BarChart3 size={20} />,
       summary: 'Converting multi-source operational metrics into intuitive executive KPI reports and relational database insights.',
       skills: [
         { name: 'Power BI', icon: Icons.PowerBI, detail: 'Interactive KPI Dashboards & Executive Reports', metric: 'Executive BI' },
@@ -150,7 +151,7 @@ export default function RoleCapabilities() {
       id: 'business-systems-analyst',
       title: 'Business Systems Analyst',
       badge: 'Process Architecture',
-      icon: '⚙️',
+      icon: <Settings2 size={20} />,
       summary: 'Bridging engineering teams and corporate requirements through 3NF schema normalization and SDLC blueprints.',
       skills: [
         { name: 'React', icon: Icons.React, detail: 'Component-Based UI Architecture & System Specs', metric: 'UI Systems' },
@@ -199,7 +200,7 @@ export default function RoleCapabilities() {
 
         {/* Intuitive Instruction Banner */}
         <div className="flip-instruction-banner">
-          <span className="flip-icon">🔄</span>
+          <span className="flip-icon"><RefreshCw size={16} /></span>
           <span>Hover or tap any tech card below to flip and view practical usage</span>
         </div>
 

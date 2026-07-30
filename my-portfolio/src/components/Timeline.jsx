@@ -1,4 +1,5 @@
 import React from 'react';
+import { Ruler, Laptop, GraduationCap } from 'lucide-react';
 
 export default function ExperienceTimeline() {
   const timelineItems = [
@@ -8,7 +9,7 @@ export default function ExperienceTimeline() {
       period: "2026",
       role: "University Student Assistant — Systems Analysis & Design",
       organization: "North-West University",
-      icon: "📐",
+      icon: <Ruler size={20} color="#10b981" />,
       description: "Evaluating undergraduate coursework, assessing system modeling (SDLC, ERDs, UML), and providing structured feedback on systems architecture.",
       tags: ["SDLC Evaluation", "Systems Analysis", "UML & ERDs", "Academic Assessment"],
       accentColor: "#10b981" // Emerald
@@ -19,7 +20,7 @@ export default function ExperienceTimeline() {
       period: "2025 — 2026",
       role: "University Student Assistant — Advanced UI Programming",
       organization: "North-West University",
-      icon: "💻",
+      icon: <Laptop size={20} color="#3b82f6" />,
       description: "Facilitated practical lab sessions, assisted peers in debugging C# and database queries, and graded advanced user interface programming implementations.",
       tags: ["UI/UX Grading", "C# Debugging", "Database Queries", "Peer Mentorship", "Lab Support"],
       accentColor: "#3b82f6" // Blue
@@ -30,7 +31,7 @@ export default function ExperienceTimeline() {
       period: "2026",
       role: "Lead Peer Buddy & Academic Consultant",
       organization: "Gradesmatch Academy (BridgeOne)",
-      icon: "🎓",
+      icon: <GraduationCap size={20} color="#8b5cf6" />,
       description: "Providing academic guidance, tutoring, crisis intervention support, student mentorship, and strategic onboarding consulting to help students navigate higher education pathways.",
       tags: ["Academic Consulting", "Peer Mentorship", "Student Onboarding", "Crisis Support"],
       accentColor: "#8b5cf6" // Purple
@@ -95,7 +96,6 @@ export default function ExperienceTimeline() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '1.2rem',
                 boxShadow: `0 0 12px ${item.accentColor}40`,
                 zIndex: 2
               }}>

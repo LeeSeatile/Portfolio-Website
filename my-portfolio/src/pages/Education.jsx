@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CircleDot, Zap, Sparkles, Download, Play } from 'lucide-react';
 
 export default function Education() {
   const [activeHolo, setActiveHolo] = useState('nwu');
@@ -8,12 +9,12 @@ export default function Education() {
     {
       id: 'nwu',
       institution: "North-West University (NWU)",
-      logo: "/nwu.jpg",
+      logo: `${import.meta.env.BASE_URL}nwu.jpg`,
       accentColor: "#a855f7", // Holographic Purple
       glowColor: "rgba(168, 85, 247, 0.4)",
       degree: "Bachelor of Science in Information Technology",
       status: "Final Year (Expected Completion: 2026)",
-      transcriptLink: "/nwu-transcript.pdf",
+      transcriptLink: `${import.meta.env.BASE_URL}nwu-transcript.pdf`,
       summary: "Maintained an overall academic average above 80% throughout my Bachelor of Science in Information Technology studies, with strong distinctions across core technical modules.",
       highlights: [
         "Advanced Systems Analysis & Design (Appointed Marker & Tutor)",
@@ -26,12 +27,12 @@ export default function Education() {
     {
       id: 'cput',
       institution: "Cape Peninsula University of Technology (CPUT)",
-      logo: "/cput.jpg",
+      logo: `${import.meta.env.BASE_URL}cput.jpg`,
       accentColor: "#38bdf8", // Holographic Blue
       glowColor: "rgba(56, 189, 248, 0.4)",
       degree: "Higher Certificate in Information & Communication Technology",
       status: "Graduated Summa Cum Laude 2023",
-      transcriptLink: "/cput-transcript.pdf",
+      transcriptLink: `${import.meta.env.BASE_URL}cput-transcript.pdf`,
       summary: "Completed with Summa Cum Laude honors, achieving top-tier distinction results across all foundational programming and IT service modules.",
       highlights: [
         "Information Technology Services Practice 1: 94% (Pass with Distinction)",
@@ -120,9 +121,20 @@ export default function Education() {
                     background: isSelected ? 'rgba(255,255,255,0.1)' : '#f2f7f4', 
                     padding: '0.2rem 0.6rem', 
                     borderRadius: '10px',
-                    color: isSelected ? '#ffffff' : '#2b4732'
+                    color: isSelected ? '#ffffff' : '#2b4732',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.3rem'
                   }}>
-                    {isSelected ? '🟢 STREAMING' : '⚡ CLICK TO BOOT'}
+                    {isSelected ? (
+                      <>
+                        <CircleDot size={12} color="#10b981" /> STREAMING
+                      </>
+                    ) : (
+                      <>
+                        <Zap size={12} /> CLICK TO BOOT
+                      </>
+                    )}
                   </span>
                 </div>
 
@@ -132,8 +144,8 @@ export default function Education() {
                 <div style={{ fontSize: '0.95rem', fontWeight: '700', color: edu.accentColor, marginBottom: '0.4rem' }}>
                   {edu.degree}
                 </div>
-                <div style={{ fontSize: '0.8rem', color: isSelected ? '#a8bfae' : '#64748b', marginBottom: '1rem' }}>
-                  ✦ {edu.status}
+                <div style={{ fontSize: '0.8rem', color: isSelected ? '#a8bfae' : '#64748b', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                  <Sparkles size={13} color={edu.accentColor} /> {edu.status}
                 </div>
 
                 <p style={{ fontSize: '0.88rem', lineHeight: '1.6', color: isSelected ? '#c2d6c5' : '#4a5568', margin: '1rem 0' }}>
@@ -169,16 +181,16 @@ export default function Education() {
                           href={edu.transcriptLink} 
                           target="_blank" 
                           rel="noreferrer"
-                          style={{ background: '#ffffff', color: '#121612', padding: '0.5rem 1rem', borderRadius: '15px', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 'bold', display: 'inline-block' }}
+                          style={{ background: '#ffffff', color: '#121612', padding: '0.5rem 1rem', borderRadius: '15px', textDecoration: 'none', fontSize: '0.8rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
                         >
-                          📥 Download Official PDF
+                          <Download size={14} /> Download Official PDF
                         </a>
                       </div>
                     )}
                   </div>
                 ) : (
-                  <div style={{ fontSize: '0.78rem', color: edu.accentColor, fontWeight: '700', marginTop: '1rem' }}>
-                    ▶ Initialize Holo-Stream...
+                  <div style={{ fontSize: '0.78rem', color: edu.accentColor, fontWeight: '700', marginTop: '1rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                    <Play size={12} /> Initialize Holo-Stream...
                   </div>
                 )}
               </div>

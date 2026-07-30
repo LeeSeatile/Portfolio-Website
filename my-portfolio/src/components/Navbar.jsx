@@ -1,11 +1,12 @@
 import React from 'react';
 import cvFile from '../assets/CV.pdf';
+import { Feather, FileText } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab }) {
   return (
     <header className="navbar-container">
       <div className="navbar-logo" onClick={() => setActiveTab('home')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <span style={{ fontSize: '1.1rem' }}>🪶</span>
+        <Feather size={20} color="#2b4732" />
         <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontWeight: 'bold', fontSize: '1.15rem', color: '#2b4732' }}>
           Lee-Anne Seatile Ramokotjo
         </span>
@@ -24,9 +25,8 @@ export default function Navbar({ activeTab, setActiveTab }) {
           target="_blank" 
           rel="noopener noreferrer" 
           className="nav-btn resume-btn"
-          style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
         >
-          📄 Resume
+          Resume
         </a>
       </nav>
     </header>
